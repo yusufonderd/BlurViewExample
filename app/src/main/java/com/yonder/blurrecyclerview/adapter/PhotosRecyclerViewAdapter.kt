@@ -10,7 +10,7 @@ import eightbitlab.com.blurview.RenderScriptBlur
 /**
  * Created by Yusuf Önder on 26,March,2021
  */
-private const val BLUR_RADIUS = 20F
+private const val BLUR_RADIUS = 25F
 
 class PhotosRecyclerViewAdapter(private val titles: List<String>) :
     RecyclerView.Adapter<PhotoItemViewHolder>() {
