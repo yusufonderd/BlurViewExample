@@ -15,7 +15,7 @@ class PhotoItemViewHolder(v: View) : RecyclerView.ViewHolder(v) {
 
     var tvTitle : TextView = v.findViewById(R.id.tvTitle)
     var blurView : BlurView = v.findViewById(R.id.blurView)
-    var clRoot : ConstraintLayout = v.findViewById(R.id.clRoot)
+    var blurViewRoot : ConstraintLayout = v.findViewById(R.id.blurViewRoot)
 
     fun bind(title : String){
         tvTitle.text = title

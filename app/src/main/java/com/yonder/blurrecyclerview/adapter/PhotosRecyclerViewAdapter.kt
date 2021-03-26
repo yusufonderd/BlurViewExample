@@ -29,7 +29,7 @@ class PhotosRecyclerViewAdapter(private val titles: List<String>) :
                 // setup blur view
                 // if you don't setup it doesn't work
                 setupWith(parent)
-                    .setBlurAlgorithm(RenderScriptBlur(viewHolder.clRoot.context))
+                    .setBlurAlgorithm(RenderScriptBlur(viewHolder.blurViewRoot.context))
                     .setBlurRadius(BLUR_RADIUS)
                     .setHasFixedTransformationMatrix(false)
             }
