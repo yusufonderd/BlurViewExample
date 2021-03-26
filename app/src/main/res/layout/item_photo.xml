@@ -1,26 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:id="@+id/clRoot"
-    android:layout_height="wrap_content">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/clRoot"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
 
-    <ImageView
+  <androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    app:cardCornerRadius="@dimen/item_photo_card_view_corner_radius"
+    app:cardElevation="@dimen/item_photo_card_view_elevation"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintDimensionRatio="H,10:5"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+
+      <ImageView
         android:id="@+id/ivBackground"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="H,10:5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_item_background" />
 
-    <eightbitlab.com.blurview.BlurView
+      <eightbitlab.com.blurview.BlurView
         android:id="@+id/blurView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="@dimen/item_photo_blur_view_height"
         android:layout_marginHorizontal="@dimen/item_photo_blur_view_margin_horizontal"
         android:layout_marginBottom="@dimen/item_photo_blur_view_margin_bottom"
@@ -31,13 +43,18 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:textColor="@color/white"
-         />
+          android:id="@+id/tvTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+          android:textColor="@color/white" />
 
-    </eightbitlab.com.blurview.BlurView>
+      </eightbitlab.com.blurview.BlurView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
