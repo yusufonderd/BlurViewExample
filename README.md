@@ -1,7 +1,7 @@
 # Blur View Usage in RecyclerView 
 Used [Blur View Library]  in this sample project 
 
-about [issue] to fix recyclerview scroll performance 
+about [issue] recyclerview scroll performance 
 
  [Blur View Library]: <https://github.com/Dimezis/BlurView>
  [issue]: <https://github.com/Dimezis/BlurView/issues/138>
